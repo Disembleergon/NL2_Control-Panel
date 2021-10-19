@@ -39,17 +39,17 @@
 
 #gatesSwitch {
   top: 20%;
-  left: 30%;
+  left: 27.5%;
 }
 
 #harnessSwitch {
   top: 20%;
-  left: 10%;
+  left: 5%;
 }
 
 #platformSwitch {
   top: 20%;
-  left: 50%;
+  left: 52.5%;
 }
 
 .emergencyBtn {
@@ -61,5 +61,35 @@
   height: 50%;
   position: absolute;
   top: 5%;
-  right: 5%;
+  right: 2.5%;
+}
+
+/* -------- text ----------*/
+
+.dispatchTitle {
+  font-size: 0.7rem;
+  text-align: center;
+  transform: translate(0, -180%);
+}
+
+.switchTitle {
+  font-size: 0.7rem;
+  text-align: center;
+  transform: translate(0, -200%);
+}
+
+.subSigns {
+  display: flex;
+  justify-content: center;
+  transform: translate(0, -110%);
+}
+
+.openSign {
+  font-size: 0.7rem;
+  margin-right: 40%;
+}
+
+.closeSign {
+  font-size: 0.7rem;
+  margin-left: 40%;
 }
