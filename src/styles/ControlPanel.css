@@ -21,6 +21,7 @@
   height: 24%;
   position: absolute;
   -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
 }
 
 #dispatchBtn1 {
@@ -42,6 +43,7 @@
   height: 24%;
   position: absolute;
   -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
 }
 
 #gatesSwitch {
@@ -70,6 +72,7 @@
   top: 5%;
   right: 2.5%;
   -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
 }
 
 /* -------- text ----------*/

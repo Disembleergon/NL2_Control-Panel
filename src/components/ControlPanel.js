@@ -41,18 +41,40 @@ function ControlPanel() {
 
   // --------- button on-click-functions ----------
 
+  let [dispatchRunning, setDispatchRunning] = useState(false);
+
+  const checkDispatch = () => {
+    if (!dispatch1Btn.state && !dispatch2Btn.state) return;
+    setDispatchRunning(true);
+
+    // turn off light after timeout
+    setTimeout(() => {
+      setDispatch1Btn({ state: false, icon: dispatchBtnIcons[0] });
+      setDispatch2Btn({ state: false, icon: dispatchBtnIcons[0] });
+      setDispatchRunning(false);
+    }, 1500);
+  };
+
   const dispatch1Btn_clicked = () => {
+    if (dispatchRunning) return;
+
     setDispatch1Btn({
       state: !dispatch1Btn.state,
       icon: dispatchBtnIcons[+!dispatch1Btn.state],
     });
+
+    checkDispatch();
   };
 
   const dispatch2Btn_clicked = () => {
+    if (dispatchRunning) return;
+
     setDispatch2Btn({
       state: !dispatch2Btn.state,
       icon: dispatchBtnIcons[+!dispatch2Btn.state],
     });
+
+    checkDispatch();
   };
 
   const harnessBtn_clicked = () => {
