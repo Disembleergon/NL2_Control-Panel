@@ -9,11 +9,17 @@ function Menu() {
   };
 
   return (
-    <div className="menu">
-      <input type="text" placeholder="IP-adress" className="menuInput"></input>
-      <button className="menuButton" onClick={onBtnClick}>
-        CONNECT
-      </button>
+    <div className="menuRoute">
+      <div className="menu">
+        <input
+          type="text"
+          placeholder="IP-adress"
+          className="menuInput"
+        ></input>
+        <button className="menuButton" onClick={onBtnClick}>
+          CONNECT
+        </button>
+      </div>
     </div>
   );
 }

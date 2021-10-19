@@ -1,4 +1,4 @@
-body {
+.menuRoute {
   margin: 0;
   padding: 0;
   height: 100vh;
@@ -19,4 +19,8 @@ body {
   border: none;
   text-align: center;
   font-size: 1rem;
+}
+
+.menuButton {
+  cursor: pointer;
 }
