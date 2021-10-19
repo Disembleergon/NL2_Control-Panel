@@ -1,0 +1,65 @@
+.controlpanelRoute {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f1f1f1;
+  position: relative;
+}
+
+.dispatchBtn {
+  background: url("../assets/greenBtn_off.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 10%;
+  height: 20%;
+  position: absolute;
+}
+
+#dispatchBtn1 {
+  top: 70%;
+  left: 5%;
+}
+
+#dispatchBtn2 {
+  top: 70%;
+  right: 5%;
+}
+
+.switch {
+  background: url("../assets/switch_right.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 10%;
+  height: 20%;
+  position: absolute;
+}
+
+#gatesSwitch {
+  top: 20%;
+  left: 30%;
+}
+
+#harnessSwitch {
+  top: 20%;
+  left: 10%;
+}
+
+#platformSwitch {
+  top: 20%;
+  left: 50%;
+}
+
+.emergencyBtn {
+  background: url("../assets/emergencyBtn_released.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 20%;
+  height: 40%;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
