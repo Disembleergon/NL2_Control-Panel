@@ -23,4 +23,8 @@
 
 .menuButton {
   cursor: pointer;
+  border: 1px solid transparent;
+  padding: 0.7rem;
+  background-color: rgba(228, 228, 228, 0.719);
+  color: rgb(66, 66, 66);
 }
