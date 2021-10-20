@@ -31,10 +31,10 @@ function IndustrialSwitch(props) {
       </h1>
       <div className="subSigns">
         <p className="openSign" id={`openSign${props.type}`}>
-          OPEN
+          {props.open === undefined ? "OPEN" : props.open}
         </p>
         <p className="closeSign" id={`closeSign${props.type}`}>
-          CLOSE
+          {props.close === undefined ? "CLOSE" : props.close}
         </p>
       </div>
     </div>

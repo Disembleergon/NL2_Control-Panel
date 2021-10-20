@@ -58,7 +58,7 @@ function ControlPanel() {
 
       <IndustrialSwitch type="Harness" />
       <IndustrialSwitch type="Gates" />
-      <IndustrialSwitch type="Platform" />
+      <IndustrialSwitch type="Platform" open="RAISE" close="LOWER" />
       <EmergencyButton />
     </div>
   );
