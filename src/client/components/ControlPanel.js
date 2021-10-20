@@ -1,14 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/ControlPanel.css";
 import dispatch_off from "../assets/greenBtn_off.png";
 import dispatch_on from "../assets/greenBtn_on.png";
 import IndustrialSwitch from "./IndustrialSwitch";
 import EmergencyButton from "./EmergencyButton";
+import DispatchButton from "./DispatchButton";
 
 const dispatchBtnIcons = [dispatch_off, dispatch_on];
 
 function ControlPanel() {
-  // -------- button states ----------
+  // -------- dispatch-button states ----------
   let [dispatch1Btn, setDispatch1Btn] = useState({
     state: false,
     icon: dispatchBtnIcons[0],
@@ -18,12 +19,12 @@ function ControlPanel() {
     icon: dispatchBtnIcons[0],
   });
 
-  // --------- button on-click-functions ----------
+  // --------- dispatch-button logic ----------
 
   let [dispatchRunning, setDispatchRunning] = useState(false);
 
   const checkDispatch = () => {
-    if (!dispatch1Btn.state && !dispatch2Btn.state) return;
+    if (!dispatch1Btn.state || !dispatch2Btn.state) return;
     setDispatchRunning(true);
 
     // turn off light after timeout
@@ -34,50 +35,26 @@ function ControlPanel() {
     }, 1500);
   };
 
-  const dispatch1Btn_clicked = () => {
-    if (dispatchRunning) return;
-
-    setDispatch1Btn({
-      state: !dispatch1Btn.state,
-      icon: dispatchBtnIcons[+!dispatch1Btn.state],
-    });
-
-    checkDispatch();
-  };
-
-  const dispatch2Btn_clicked = () => {
-    if (dispatchRunning) return;
-
-    setDispatch2Btn({
-      state: !dispatch2Btn.state,
-      icon: dispatchBtnIcons[+!dispatch2Btn.state],
-    });
-
-    checkDispatch();
-  };
+  useEffect(checkDispatch, [checkDispatch, dispatch1Btn]);
+  useEffect(checkDispatch, [checkDispatch, dispatch2Btn]);
 
   return (
     <div className="controlpanelRoute">
-      <div
-        className="dispatchBtn"
-        id="dispatchBtn1"
-        style={{ backgroundImage: `url(${dispatch1Btn.icon})` }}
-        onClick={dispatch1Btn_clicked}
-      >
-        <h1 className="dispatchTitle" id="dispatchTitle1">
-          DISPATCH
-        </h1>
-      </div>
-      <div
-        className="dispatchBtn"
-        id="dispatchBtn2"
-        style={{ backgroundImage: `url(${dispatch2Btn.icon})` }}
-        onClick={dispatch2Btn_clicked}
-      >
-        <h1 className="dispatchTitle" id="dispatchTitle2">
-          DISPATCH
-        </h1>
-      </div>
+      <DispatchButton
+        buttonNumber="1"
+        dispatchRunning={dispatchRunning}
+        buttonState={dispatch1Btn}
+        setButtonState={setDispatch1Btn}
+        buttonIcons={dispatchBtnIcons}
+      />
+
+      <DispatchButton
+        buttonNumber="2"
+        dispatchRunning={dispatchRunning}
+        buttonState={dispatch2Btn}
+        setButtonState={setDispatch2Btn}
+        buttonIcons={dispatchBtnIcons}
+      />
 
       <IndustrialSwitch type="Harness" />
       <IndustrialSwitch type="Gates" />
