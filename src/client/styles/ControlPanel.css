@@ -16,7 +16,7 @@
   background: url("../assets/greenBtn_off.png");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   width: 12%;
   height: 24%;
   position: absolute;
@@ -38,7 +38,7 @@
   background: url("../assets/switch_right.png");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   width: 12%;
   height: 24%;
   position: absolute;
@@ -65,7 +65,7 @@
   background: url("../assets/emergencyBtn_released.png");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   width: 25%;
   height: 50%;
   position: absolute;
@@ -78,13 +78,13 @@
 /* -------- text ----------*/
 
 .dispatchTitle {
-  font-size: 0.7rem;
+  font-size: 1.3vw;
   text-align: center;
   transform: translate(0, -180%);
 }
 
 .switchTitle {
-  font-size: 0.7rem;
+  font-size: 1.3vw;
   text-align: center;
   transform: translate(0, -200%);
 }
@@ -96,11 +96,11 @@
 }
 
 .openSign {
-  font-size: 0.7rem;
+  font-size: 1.3vw;
   margin-right: 40%;
 }
 
 .closeSign {
-  font-size: 0.7rem;
+  font-size: 1.3vw;
   margin-left: 40%;
 }
