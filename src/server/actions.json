@@ -1,5 +1,5 @@
 {
-  "dispatch": "numpad_enter",
+  "dispatch": "enter",
   "harnessOpen": "numpad_8",
   "harnessClose": "numpad_2",
   "gatesOpen": "numpad_9",
