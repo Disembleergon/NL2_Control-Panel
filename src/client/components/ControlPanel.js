@@ -9,6 +9,26 @@ import DispatchButton from "./DispatchButton";
 const dispatchBtnIcons = [dispatch_off, dispatch_on];
 
 function ControlPanel() {
+  const sendRequest = (action) => {
+    let data = {
+      action: action,
+      connectionTest: false,
+    };
+
+    fetch(
+      `http://${sessionStorage.getItem("nl2-control-panel_entered-ip")}:4641`,
+      {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: { "Content-Type": "application/json" },
+        mode: "cors",
+      }
+    ).catch(() => {
+      alert("Couldn't connect to server");
+      window.open("/", "_self");
+    });
+  };
+
   // -------- dispatch-button states ----------
   let [dispatch1Btn, setDispatch1Btn] = useState({
     state: false,
@@ -26,6 +46,9 @@ function ControlPanel() {
   const checkDispatch = () => {
     if (!dispatch1Btn.state || !dispatch2Btn.state) return;
     setDispatchRunning(true);
+
+    // prevent multiple requests with one dispatch
+    if (!dispatchRunning) sendRequest("dispatch");
 
     // turn off light after timeout
     setTimeout(() => {
@@ -56,10 +79,27 @@ function ControlPanel() {
         buttonIcons={dispatchBtnIcons}
       />
 
-      <IndustrialSwitch type="Harness" />
-      <IndustrialSwitch type="Gates" />
-      <IndustrialSwitch type="Platform" open="RAISE" close="LOWER" />
-      <EmergencyButton />
+      <IndustrialSwitch
+        type="Harness"
+        sendRequest={sendRequest}
+        left_state="harnessOpen"
+        right_state="harnessClose"
+      />
+      <IndustrialSwitch
+        type="Gates"
+        sendRequest={sendRequest}
+        left_state="gatesOpen"
+        right_state="gatesClose"
+      />
+      <IndustrialSwitch
+        type="Platform"
+        open="RAISE"
+        close="LOWER"
+        sendRequest={sendRequest}
+        left_state="platformRaise"
+        right_state="platformLower"
+      />
+      <EmergencyButton sendRequest={sendRequest} />
     </div>
   );
 }

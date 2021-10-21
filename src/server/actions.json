@@ -1,0 +1,11 @@
+{
+  "dispatch": "numpad_enter",
+  "harnessOpen": "numpad_8",
+  "harnessClose": "numpad_2",
+  "gatesOpen": "numpad_9",
+  "gatesClose": "numpad_3",
+  "platformRaise": "numpad_7",
+  "platformLower": "numpad_1",
+  "emergencyOn": "f8",
+  "emergencyOff": "f8"
+}

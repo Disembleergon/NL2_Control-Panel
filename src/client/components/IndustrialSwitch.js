@@ -11,12 +11,14 @@ function IndustrialSwitch(props) {
   });
 
   const clickSwitch = () => {
-    setSwitchState({
-      state: !switchState.state,
-      icon: switchIcons[+!switchState.state],
-    });
+    let new_state = !switchState.state;
+    if (new_state) props.sendRequest(props.left_state);
+    else props.sendRequest(props.right_state);
 
-    console.log(switchState);
+    setSwitchState({
+      state: new_state,
+      icon: switchIcons[+new_state],
+    });
   };
 
   return (

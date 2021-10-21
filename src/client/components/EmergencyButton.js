@@ -4,16 +4,20 @@ import emergency_on from "../assets/emergencyBtn_pressed.png";
 
 const emergencyBtnIcons = [emergency_off, emergency_on];
 
-function EmergencyButton() {
+function EmergencyButton(props) {
   let [emergencyState, setEmergencyState] = useState({
     state: false,
     icon: emergencyBtnIcons[0],
   });
 
   const btnClick = () => {
+    let new_state = !emergencyState.state;
+    if (new_state) props.sendRequest("emergencyOn");
+    else props.sendRequest("emergencyOff");
+
     setEmergencyState({
-      state: !emergencyState.state,
-      icon: emergencyBtnIcons[+!emergencyState.state],
+      state: new_state,
+      icon: emergencyBtnIcons[+new_state],
     });
   };
 
