@@ -55,7 +55,7 @@ function ControlPanel() {
       setDispatch1Btn({ state: false, icon: dispatchBtnIcons[0] });
       setDispatch2Btn({ state: false, icon: dispatchBtnIcons[0] });
       setDispatchRunning(false);
-    }, 1500);
+    }, 3500);
   };
 
   useEffect(checkDispatch, [checkDispatch, dispatch1Btn]);
