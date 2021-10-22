@@ -1,7 +1,5 @@
 # No Limits 2 Control Panel
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/fee64ec0-a006-4f04-9b59-d1ae35ef6aa9/deploy-status)](https://app.netlify.com/sites/priceless-curie-abbc39/deploys)
-
 Control your No Limits 2 roller coasters from other devices!
 
 ![Control Panel Preview](https://github.com/Disembleergon/NL2_Control-Panel/blob/master/controlPanel_preview.png)
