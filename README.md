@@ -10,7 +10,7 @@ In the settings of No Limits 2, go to controls and look for "dispatch". There yo
 
 ![peview](https://github.com/Disembleergon/NL2_Control-Panel/blob/master/settings_preview.png)
 
-To use the Control Panel, you have to download the LTS version of NodeJS on your PC:
+To use the Control Panel, you have to download the LTS version of NodeJS on your PC:<br>
 https://nodejs.org/en/
 
 ### How it works
