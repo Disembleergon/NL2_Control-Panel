@@ -4,13 +4,13 @@
 
 Control your No Limits 2 roller coasters from other devices!
 
-[Control Panel Preview](link)
+[Control Panel Preview](https://github.com/Disembleergon/NL2_Control-Panel/blob/master/controlPanel_preview.png)
 
 #### <u>IMPORTANT</u>
 
 In the settings of No Limits 2, go to controls and look for "dispatch". There you have to add the normal enter key as assigned key.
 
-[peview](link)
+[peview](https://github.com/Disembleergon/NL2_Control-Panel/blob/master/settings_preview.png)
 
 #### <u>How it works</u>
 
