@@ -33,9 +33,11 @@ app.listen(PORT, () => {
     .flat()
     .filter(
       ({ family, internal, address }) =>
-        family === "IPv4" && !internal && address.includes("192.168.178")
+        family === "IPv4" && !internal && address.includes("192.168")
     )
-    .map(({ address }) => address)[0];
+    .map(({ address }) => address);
+
+  ip = ip[ip.length-1];
 
   console.log(`Server listening on port ${PORT}`);
   console.log(`IP-adress: ${ip}`);
