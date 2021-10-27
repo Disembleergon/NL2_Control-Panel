@@ -28,7 +28,7 @@ https://nodejs.org/en/
 
 The server just presses the correct button on the keyboard when you press something on the control panel.
 When you press both dispatch buttons for example, the server presses the enter key on the keyboard.
-You can edit those keys in the actions.json file.
+You can edit those keys in the actions.json file.<br/>[Here](http://robotjs.io/docs/syntax#keys) you can find all the keys you can insert.
 
 ### Bugs and feedback
 
