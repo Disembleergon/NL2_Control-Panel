@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/Menu.css";
 
 function Menu() {
+  // connect with server
   let onBtnClick = () => {
     let IP_adress = document.querySelector(".menuInput").value;
 
@@ -31,7 +32,7 @@ function Menu() {
       <div className="menu">
         <input
           type="text"
-          placeholder="IP-adress"
+          defaultValue={document.location.hostname}
           className="menuInput"
         ></input>
         <button className="menuButton" onClick={onBtnClick}>
