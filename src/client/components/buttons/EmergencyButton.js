@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import emergency_off from "../assets/emergencyBtn_released.png";
-import emergency_on from "../assets/emergencyBtn_pressed.png";
+import emergency_off from "../../assets/emergencyBtn_released.png";
+import emergency_on from "../../assets/emergencyBtn_pressed.png";
 
 const emergencyBtnIcons = [emergency_off, emergency_on];
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import switch_off from "../assets/switch_right.png";
-import switch_on from "../assets/switch_left.png";
+import switch_off from "../../assets/switch_right.png";
+import switch_on from "../../assets/switch_left.png";
 
 const switchIcons = [switch_off, switch_on];
 

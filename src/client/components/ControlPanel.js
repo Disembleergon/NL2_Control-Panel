@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import "../styles/ControlPanel.css";
 import dispatch_off from "../assets/greenBtn_off.png";
 import dispatch_on from "../assets/greenBtn_on.png";
-import IndustrialSwitch from "./IndustrialSwitch";
-import EmergencyButton from "./EmergencyButton";
-import DispatchButton from "./DispatchButton";
+import IndustrialSwitch from "./buttons/IndustrialSwitch";
+import EmergencyButton from "./buttons/EmergencyButton";
+import DispatchButton from "./buttons/DispatchButton";
 
 const dispatchBtnIcons = [dispatch_off, dispatch_on];
 
