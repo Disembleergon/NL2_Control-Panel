@@ -15,11 +15,11 @@ https://nodejs.org/en/
 
 ### How it works
 
-1. Download the server [here](https://github.com/Disembleergon/NL2_Control-Panel/releases/tag/v1.0.2) (NL2_Control-Panel.zip)<br><br>
+1. Download the server [here](https://github.com/Disembleergon/NL2_Control-Panel/releases/tag/v1.0.3) (NL2_Control-Panel.zip)<br><br>
 2. After you extracted the zip file and downloaded NodeJS, double click the `install.bat ` file to completely install the server (you only have to do this the first time)<br><br>
 3. Double click the `launch_server.bat` file to start the server and the website<br><br>
 4. The server now tells you the IP-adress and the website-URL. Enter the website-URL (for example 192.168.178.32:5000) into the browser of your device you want to control the coasters with (your mobile phone for example)<br><br>
-5. On the website, enter the IP-adress of your server and press connect<br><br>
+5. On the website, press connect (you can enter another IP-adress if you want)<br><br>
 6. Open No Limits 2 on your PC (don't close the server window)<br><br>
 7. Open a park and set the dispatch mode on manual<br><br>
 8. Control the roller coaster with the website and enjoy!
