@@ -1,6 +1,6 @@
 # No Limits 2 Control Panel
 
-Control your No Limits 2 roller coasters from other devices!
+Control your No Limits 2 or RideSims roller coasters from other devices!
 
 ![Control Panel Preview](https://github.com/Disembleergon/NL2_Control-Panel/blob/master/controlPanel_preview.png)
 
