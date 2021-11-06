@@ -99,6 +99,14 @@ function ControlPanel() {
         left_state="platformRaise"
         right_state="platformLower"
       />
+      <IndustrialSwitch
+        type="Car"
+        open="UNLOCK"
+        close="LOCK"
+        sendRequest={sendRequest}
+        left_state="carUnlock"
+        right_state="carLock"
+      />
       <EmergencyButton sendRequest={sendRequest} />
     </div>
   );
