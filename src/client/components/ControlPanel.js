@@ -5,16 +5,19 @@ import dispatch_on from "../assets/greenBtn_on.png";
 import IndustrialSwitch from "./buttons/IndustrialSwitch";
 import EmergencyButton from "./buttons/EmergencyButton";
 import DispatchButton from "./buttons/DispatchButton";
+import KeySwitch from "./buttons/KeySwitch";
 
 const dispatchBtnIcons = [dispatch_off, dispatch_on];
 
 function ControlPanel() {
   const sendRequest = (action) => {
+    // prepare data
     let data = {
       action: action,
       connectionTest: false,
     };
 
+    // send data to server with a http post request
     fetch(
       `http://${sessionStorage.getItem("nl2-control-panel_entered-ip")}:4641`,
       {
@@ -25,9 +28,13 @@ function ControlPanel() {
       }
     ).catch(() => {
       alert("Couldn't connect to server");
+      // go back to home screen
       window.open("/", "_self");
     });
   };
+
+  // state of the control panel [off/on]
+  let [panelState, setPanelState] = useState(false); // false = off
 
   // -------- dispatch-button states ----------
   let [dispatch1Btn, setDispatch1Btn] = useState({
@@ -44,6 +51,7 @@ function ControlPanel() {
   let [dispatchRunning, setDispatchRunning] = useState(false);
 
   const checkDispatch = () => {
+    // cancel if both dispatch buttons aren't activated
     if (!dispatch1Btn.state || !dispatch2Btn.state) return;
     setDispatchRunning(true);
 
@@ -69,6 +77,7 @@ function ControlPanel() {
         buttonState={dispatch1Btn}
         setButtonState={setDispatch1Btn}
         buttonIcons={dispatchBtnIcons}
+        panelState={panelState}
       />
 
       <DispatchButton
@@ -77,6 +86,7 @@ function ControlPanel() {
         buttonState={dispatch2Btn}
         setButtonState={setDispatch2Btn}
         buttonIcons={dispatchBtnIcons}
+        panelState={panelState}
       />
 
       <IndustrialSwitch
@@ -84,12 +94,14 @@ function ControlPanel() {
         sendRequest={sendRequest}
         left_state="harnessOpen"
         right_state="harnessClose"
+        panelState={panelState}
       />
       <IndustrialSwitch
         type="Gates"
         sendRequest={sendRequest}
         left_state="gatesOpen"
         right_state="gatesClose"
+        panelState={panelState}
       />
       <IndustrialSwitch
         type="Platform"
@@ -98,6 +110,7 @@ function ControlPanel() {
         sendRequest={sendRequest}
         left_state="platformRaise"
         right_state="platformLower"
+        panelState={panelState}
       />
       <IndustrialSwitch
         type="Car"
@@ -106,8 +119,11 @@ function ControlPanel() {
         sendRequest={sendRequest}
         left_state="carUnlock"
         right_state="carLock"
+        panelState={panelState}
       />
-      <EmergencyButton sendRequest={sendRequest} />
+
+      <KeySwitch panelState={panelState} setPanelState={setPanelState} />
+      <EmergencyButton sendRequest={sendRequest} panelState={panelState} />
     </div>
   );
 }

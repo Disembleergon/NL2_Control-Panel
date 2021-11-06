@@ -12,8 +12,12 @@ function EmergencyButton(props) {
 
   const btnClick = () => {
     let new_state = !emergencyState.state;
-    if (new_state) props.sendRequest("emergencyOn");
-    else props.sendRequest("emergencyOff");
+
+    // send request if panel isn't turned off
+    if (props.panelState) {
+      if (new_state) props.sendRequest("emergencyOn");
+      else props.sendRequest("emergencyOff");
+    }
 
     setEmergencyState({
       state: new_state,

@@ -2,7 +2,8 @@ import React from "react";
 
 function DispatchButton(props) {
   const buttonClick = () => {
-    if (props.dispatchRunning) return;
+    // cancel if dispatch is running or the panel is turned off
+    if (props.dispatchRunning || !props.panelState) return;
 
     props.setButtonState({
       state: !props.buttonState.state,

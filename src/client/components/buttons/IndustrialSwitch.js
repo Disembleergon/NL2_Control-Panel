@@ -12,9 +12,14 @@ function IndustrialSwitch(props) {
 
   const clickSwitch = () => {
     let new_state = !switchState.state;
-    if (new_state) props.sendRequest(props.left_state);
-    else props.sendRequest(props.right_state);
 
+    // send request if panel isn't turned off
+    if (props.panelState) {
+      if (new_state) props.sendRequest(props.left_state);
+      else props.sendRequest(props.right_state);
+    }
+
+    // turn the switch / toggle state
     setSwitchState({
       state: new_state,
       icon: switchIcons[+new_state],

@@ -34,6 +34,20 @@
   right: 5%;
 }
 
+.key {
+  background: url("../assets/key_left.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 12%;
+  height: 24%;
+  position: absolute;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  left: 5%;
+  top: 15%;
+}
+
 .switch {
   background: url("../assets/switch_right.png");
   background-position: center;
@@ -61,7 +75,7 @@
   left: 27.5%;
 }
 
-#carSwitch{
+#carSwitch {
   top: 55%;
   left: 52.5%;
 }
