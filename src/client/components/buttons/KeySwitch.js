@@ -28,7 +28,9 @@ function KeySwitch(props) {
       className="key"
       style={{ backgroundImage: `url(${keyState.icon})` }}
       onClick={keyToggle}
-    ></div>
+    >
+      <h1>POWER</h1>
+    </div>
   );
 }
 
