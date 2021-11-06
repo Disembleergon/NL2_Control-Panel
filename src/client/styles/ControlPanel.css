@@ -48,16 +48,21 @@
 
 #gatesSwitch {
   top: 20%;
-  left: 27.5%;
+  left: 52.5%;
 }
 
 #harnessSwitch {
   top: 20%;
-  left: 5%;
+  left: 27.5%;
 }
 
 #platformSwitch {
-  top: 20%;
+  top: 55%;
+  left: 27.5%;
+}
+
+#carSwitch{
+  top: 55%;
   left: 52.5%;
 }
 
