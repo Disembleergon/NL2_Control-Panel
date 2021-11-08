@@ -12,8 +12,8 @@ In the settings of No Limits 2, go to controls and look for "dispatch". There yo
 
 To use the Control Panel, you have to download the LTS version of NodeJS on your PC:<br>
 https://nodejs.org/en/ <br><br>
-You also may have to install windows-build-tools. You do that by pressing the windows key and R at the same time and then<br>
-entering the command ```npm i -g windows-build-tools```
+You probably also have to install Python:<br>
+https://www.python.org
 
 ### How it works
 
