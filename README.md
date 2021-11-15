@@ -17,6 +17,8 @@ https://www.python.org
 
 ### How it works
 
+_[Here](https://youtu.be/coFRsiAlJg4) you can find a tutorial explaining how to install the panel._
+
 1. Download the server [here](https://github.com/Disembleergon/NL2_Control-Panel/releases/tag/v1.1.2) (NL2_Control-Panel.zip)<br><br>
 2. After you extracted the zip file and downloaded NodeJS, double click the `install.bat ` file to completely install the server (you only have to do this the first time)<br><br>
 3. Double click the `launch_server.bat` file to start the server and the website<br><br>
