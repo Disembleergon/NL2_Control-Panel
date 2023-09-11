@@ -10,17 +10,17 @@ In the settings of No Limits 2, go to controls and look for "dispatch". There yo
 
 ![peview](https://github.com/Disembleergon/NL2_Control-Panel/blob/master/settings_preview.png)
 
-To use the Control Panel, you have to download the LTS version of NodeJS on your PC:<br>
+To use the Control Panel, you have to download the <ins>**LTS version**</ins> of NodeJS on your PC:<br>
 https://nodejs.org/en/ <br><br>
 Then, download [the Ms Build Tools](https://aka.ms/vs/17/release/vs_BuildTools.exe) and run the exe file.<br>
 In the installer, select "Desktop development with C++" ! <br><br>
-You probably also have to install Python:<br>
+You also have to install Python:<br>
 https://www.python.org
 
 ### How it works
 
 1. Download the server [here](https://github.com/Disembleergon/NL2_Control-Panel/releases/latest) (NL2_Control-Panel.zip)<br><br>
-2. After you extracted the zip file and downloaded NodeJS, double click the `install.bat ` file to completely install the server (you only have to do this the first time)<br><br>
+2. After you extracted the zip file and **downloaded the prerequisites**, double click the `install.bat ` file to completely install the server (you only have to do this the first time)<br><br>
 3. Double click the `launch_server.bat` file to start the server and the website<br><br>
 4. The server now tells you the IP-adress and the website-URL. Enter the website-URL (for example 192.168.178.32:3000) into the browser of your device you want to control the coasters with (your mobile phone for example)<br><br>
 5. On the website, press connect (you can enter another IP-adress if you want)<br><br>
